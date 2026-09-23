@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+:root {
+  --bg-base: #0b1020;
+  --bg-surface: #121a2b;
+  --bg-elevated: #182238;
+  --text-primary: #f5f7fb;
+  --text-muted: #98a6bf;
+  --accent-primary: #7c8cff;
+  --accent-hover: #6677f2;
+  --border-default: #26324a;
+  --state-error: #f87171;
+  --state-success: #4ade80;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg-base); color: var(--text-primary); }

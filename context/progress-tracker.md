@@ -1,37 +1,35 @@
 # Progress Tracker
 
-Update this file after every meaningful implementation
-change.
+Update this file after every meaningful implementation change.
 
 ## Current Phase
 
-- [e.g. Not started / In progress / Complete]
+- In progress — editor feature (base chrome complete).
 
 ## Current Goal
 
-- [What you are building right now]
+- Implement `context/feature-specs/02-editor.md` exactly as specified.
 
 ## Completed
 
-- None yet.
+- Defined the Apex visual direction, color tokens, typography, radius scale, component guidance, layout patterns, icon rules, imagery, motion, and UI acceptance criteria in `context/ui-context.md`.
 
 ## In Progress
 
-- None yet.
+- Base editor chrome implemented: navbar, floating project sidebar, tabs, empty states, and reusable dialog pattern.
 
 ## Next Up
 
-- [First unit to build]
+- Add the next editor feature specification and extend the shell.
 
 ## Open Questions
 
-- [Any unresolved product or technical decisions]
+- None for the current editor base chrome.
 
 ## Architecture Decisions
 
-- [Decisions made that affect the system design or
-  data model — include why the decision was made]
+- Use centralized CSS custom properties for all UI colors so the Apex site stays visually consistent and can be rebranded without editing individual components.
 
 ## Session Notes
 
-- [Context needed to resume work in the next session]
+- 2026-09-23: Implemented the editor base chrome from `02-editor.md`: dark tokenized navbar, floating sidebar with tabs and New Project action, and dialog pattern.
