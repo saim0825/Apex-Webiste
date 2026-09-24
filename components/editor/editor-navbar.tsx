@@ -1,4 +1,5 @@
 import { PanelLeftClose, PanelLeftOpen } from "./icons";
+import { UserButton } from "@clerk/nextjs";
 
 type EditorNavbarProps = { isSidebarOpen: boolean; onToggleSidebar: () => void };
 
@@ -9,7 +10,7 @@ export function EditorNavbar({ isSidebarOpen, onToggleSidebar }: EditorNavbarPro
         {isSidebarOpen ? <PanelLeftClose className="h-5 w-5" /> : <PanelLeftOpen className="h-5 w-5" />}
       </button></div>
       <div className="text-center text-sm font-medium tracking-wide text-[var(--text-primary)]">Apex Editor</div>
-      <div aria-hidden="true" />
+      <div className="flex justify-end"><UserButton /></div>
     </div>
   </header>;
 }
