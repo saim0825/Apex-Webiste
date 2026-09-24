@@ -1,4 +1,6 @@
 {
   "code-runner.showRunIconInEditorTitleMenu": false,
-  "code-runner.showRunCommandInEditorContextMenu": false
+  "code-runner.showRunCommandInEditorContextMenu": false,
+  "npm.enableScriptExplorer": true,
+  "debug.javascript.codelens.npmScripts": true
 }
