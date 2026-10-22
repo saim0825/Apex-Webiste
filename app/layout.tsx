@@ -24,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col"><ClerkProvider appearance={{ variables: { colorBackground: "#121a2b", colorText: "#f5f7fb", colorInputBackground: "#182238", colorInputText: "#f5f7fb", colorPrimary: "#7c8cff" } }}>{children}</ClerkProvider></body>
+      <body className="min-h-full flex flex-col"><ClerkProvider signInUrl="/sign-in" signUpUrl="/sign-up" signInForceRedirectUrl="/admin" signUpForceRedirectUrl="/admin" appearance={{ variables: { colorBackground: "#ffffff", colorForeground: "#082745", colorMutedForeground: "#5c6b7a", colorInput: "#ffffff", colorInputForeground: "#082745", colorPrimary: "#f15b2a" } }}>{children}</ClerkProvider></body>
     </html>
   );
 }

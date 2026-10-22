@@ -36,3 +36,16 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 # Apex-Webiste
+# Apex Website
+
+## Admin content management
+
+The protected `/admin` page manages `Property` records through Prisma. Set
+`ADMIN_CLERK_USER_IDS` in `.env.local` to a comma-separated list of Clerk user
+IDs before opening the dashboard. The new migration is in
+`prisma/migrations/20261022120000_add_property_content`.
+
+Run `npx prisma migrate deploy` in a deployed environment and keep
+`DATABASE_URL` configured there. Property images currently use an approved
+image URL; direct Cloudinary uploads can be connected to the `imageUrl` field
+once the storage account is configured.
