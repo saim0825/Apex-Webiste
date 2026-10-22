@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  clerkUserId String
+  name        String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([clerkUserId])
+}
+
+model Property {
+  id          String   @id @default(cuid())
+  title       String
+  category    String
+  description String
+  imageUrl    String?
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([published])
+  @@index([category])
+}
+
+model SiteContent {
+  id             String   @id @default("default")
+  heroEyebrow    String   @default("Apex Real Estate Consultants")
+  heroTitle      String   @default("South Florida real estate")
+  heroAccent     String   @default("guided with strategy.")
+  heroDescription String  @default("Residential, commercial, and business brokerage guidance for your next move.")
+  updatedAt      DateTime @updatedAt
+}
